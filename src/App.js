@@ -9,7 +9,7 @@ function App() {
         </h1>
         <ul>
           <li><a href="https://nimble-bavarois-bc9ae2.netlify.app/labs/a1/index">Lab 1</a></li>
-          <li><a href="https://nimble-bavarois-bc9ae2.netlify.app/kanbas/home">Assignment 1 - Home</a></li>
+          <li><a href="https://nimble-bavarois-bc9ae2.netlify.app/kanbas/menu">Assignment 1 - Menu</a></li>
         </ul>
       </header>
     </div>
