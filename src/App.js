@@ -1,22 +1,16 @@
-import logo from './logo.svg';
 import './App.css';
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+        <h1>
+          Web Dev Assignment 1
+        </h1>
+        <ul>
+          <li><a href="https://nimble-bavarois-bc9ae2.netlify.app/labs/a1/index">Lab 1</a></li>
+          <li><a href="https://nimble-bavarois-bc9ae2.netlify.app/kanbas/home">Assignment 1 - Home</a></li>
+        </ul>
       </header>
     </div>
   );
