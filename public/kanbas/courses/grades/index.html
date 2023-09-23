@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link href="../../index.css" rel="stylesheet" />
+    <link href="../index.css" rel="stylesheet" />
+    <link href="index.css" rel="stylesheet" />
+    <link
+      href="../../../vendors/bootstrap/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link href="../../../vendors/fontawesome/css/all.css" rel="stylesheet" />
+  </head>
+  <body>
+    <!-- Body -->
+    <div class="wd-container">
+      <!-- Kanbas Navigation Sidebar -->
+      <div class="wd-main-sidebar">
+        <ul>
+          <li>
+            <div class="wd-logo">
+              <a href="../../index.html"
+                ><img src="../../../images/neu-logo.png"
+              /></a>
+            </div>
+          </li>
+          <li>
+            <a href="../../account/profile/index.html"
+              ><i class="fas fa-user" style="color: lightgray"></i
+              ><span>Account</span></a
+            >
+          </li>
+          <li>
+            <a href="../../dashboard/index.html"
+              ><i class="fas fa-home"></i> <span>Dashboard</span></a
+            >
+          </li>
+          <li>
+            <a href="../home/index.html" class="selected"
+              ><i class="fas fa-book"></i> <span>Courses</span></a
+            >
+          </li>
+          <li>
+            <a href="#"
+              ><i class="fas fa-calendar"></i> <span>Calendar</span></a
+            >
+          </li>
+          <li>
+            <a href="#"><i class="fas fa-inbox"></i> <span>Inbox</span></a>
+          </li>
+          <li>
+            <a href="#"><i class="fas fa-history"></i> <span>History</span></a>
+          </li>
+          <li>
+            <a href="#"><i class="fas fa-cube"></i> <span>Studio</span></a>
+          </li>
+          <li>
+            <a href="#"><i class="fas fa-users"></i> <span>Commons</span></a>
+          </li>
+          <li>
+            <a href="#"
+              ><i class="fas fa-question-circle"></i> <span>Help</span></a
+            >
+          </li>
+        </ul>
+      </div>
+
+      <div class="wd-main-content">
+        <!-- Header "HOME" -->
+        <div class="wd-header">
+          <nav aria-label="breadcrumb">
+            <ol class="breadcrumb wd-breadcrumb">
+              <li>
+                <i class="fas fa-bars breadcrumb-icon wd-breadcrumb-icon"></i>
+              </li>
+              <li class="breadcrumb-item wd-breadcrumb-item">
+                <a href="#">CS5610.11744.202310</a>
+              </li>
+              <li class="breadcrumb-item active" aria-current="page">Grades</li>
+            </ol>
+          </nav>
+
+          <hr />
+        </div>
+
+        <div class="wd-content-row me-4">
+          <!-- Course Navigation Sidebar -->
+          <div class="wd-courses-sidebar">
+            <ul>
+              <li><a href="../home/index.html">Home</a></li>
+              <li><a href="#">Modules</a></li>
+              <li><a href="#">Piazza</a></li>
+              <li><a href="#">Zoom Meetings</a></li>
+              <li>
+                <a href="../assignments/index.html">Assignments</a>
+              </li>
+              <li><a href="#">Quizzes</a></li>
+              <li><a href="index.html" class="selected">Grades</a></li>
+              <li><a href="#">People</a></li>
+              <li><a href="#">Panopto Video</a></li>
+              <li><a href="#">Discussions</a></li>
+              <li><a href="#">Announcements</a></li>
+              <li><a href="#">Pages</a></li>
+              <li><a href="#">Files</a></li>
+              <li><a href="#">Rubrics</a></li>
+              <li><a href="#">Outcomes</a></li>
+              <li><a href="#">Collaborations</a></li>
+              <li><a href="#">Syllabus</a></li>
+              <li><a href="#">Settings</a></li>
+            </ul>
+          </div>
+
+          <div class="wd-modules-column">
+            <!-- Action Buttons -->
+            <div class="wd-action-buttons">
+              <button type="button" class="btn btn-light me-2">
+                <i class="fas fa-download me-1"></i> Import
+              </button>
+
+              <div class="btn-group me-2">
+                <button
+                  id="exportDropdown"
+                  class="btn btn-light dropdown-toggle"
+                >
+                  <i class="fas fa-upload me-1"></i> Export
+                </button>
+                <div class="dropdown-menu" id="exportDropdown">
+                  <a class="dropdown-item" href="#">Export Option 1</a>
+                  <a class="dropdown-item" href="#">Export Option 2</a>
+                  <a class="dropdown-item" href="#">Export Option 3</a>
+                </div>
+              </div>
+
+              <button type="button" class="btn btn-light">
+                <i class="fas fa-cog"></i>
+              </button>
+            </div>
+
+            <!-- Main Content -->
+            <div class="container mt-4">
+              <div class="row mb-3">
+                <!-- Student Name Search -->
+                <div class="col">
+                  <label for="studentSearch" class="form-label"
+                    ><h6>Student Names</h6></label
+                  >
+                  <div class="input-group">
+                    <span class="input-group-text bg-white"
+                      ><i class="fas fa-search"></i
+                    ></span>
+                    <select class="form-select" id="studentSearch">
+                      <option value="student1">Student 1</option>
+                      <option value="student2">Student 2</option>
+                      <option value="student3">Student 3</option>
+                    </select>
+                  </div>
+                </div>
+
+                <!-- Assignment Name Search -->
+                <div class="col">
+                  <label for="assignmentSearch" class="form-label"
+                    ><h6>Assignment Names</h6></label
+                  >
+                  <div class="input-group">
+                    <span class="input-group-text bg-white"
+                      ><i class="fas fa-search"></i
+                    ></span>
+                    <select class="form-select" id="assignmentSearch">
+                      <option value="assignment1">Assignment 1</option>
+                      <option value="assignment2">Assignment 2</option>
+                      <option value="assignment3">Assignment 3</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Apply Filters Button-->
+              <button type="button" class="btn btn-light mb-3">
+                <i class="fas fa-filter me-2"></i>Apply Filters
+              </button>
+
+              <!-- Grade Table -->
+              <div class="table-responsive">
+                <table class="table table-bordered table-striped text-center">
+                  <!-- Table Header -->
+                  <thead>
+                    <tr>
+                      <th class="text-start">Student Name</th>
+                      <th class="font-weight-bold">A1 SETUP</th>
+                      <th class="font-weight-bold">A2 HTML</th>
+                      <th class="font-weight-bold">A3 CSS</th>
+                      <th class="font-weight-bold">A4 BOOTSTRAP</th>
+                    </tr>
+                  </thead>
+                  <!-- Table Body-->
+                  <tbody>
+                    <!-- Student 1 -->
+                    <tr>
+                      <th class="font-weight-bold text-start">
+                        <a href="#">Student 1</a>
+                      </th>
+                      <td>
+                        <input
+                          type="text"
+                          class="form-control text-center p-0 m-0"
+                          value="95"
+                        />
+                      </td>
+                      <td>88%</td>
+                      <td>82%</td>
+                      <td>90%</td>
+                    </tr>
+                    <!-- Student 2 -->
+                    <tr>
+                      <th class="font-weight-bold text-start">
+                        <a href="#">Student 2</a>
+                      </th>
+                      <td>78%</td>
+                      <td>92%</td>
+                      <td>86%</td>
+                      <td>94%</td>
+                    </tr>
+                    <!-- Student 3 -->
+                    <tr>
+                      <th class="font-weight-bold text-start">
+                        <a href="#">Student 3</a>
+                      </th>
+                      <td>100%</td>
+                      <td>100%</td>
+                      <td>100%</td>
+                      <td>100%</td>
+                    </tr>
+                    <!-- Student 4 -->
+                    <tr>
+                      <th class="font-weight-bold text-start">
+                        <a href="#">Student 4</a>
+                      </th>
+                      <td>87%</td>
+                      <td>89%</td>
+                      <td>95%</td>
+                      <td>99%</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

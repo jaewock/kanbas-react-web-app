@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link href="../../index.css" rel="stylesheet" />
+    <link href="../index.css" rel="stylesheet" />
+    <link href="index.css" rel="stylesheet" />
+    <link
+      href="../../../vendors/bootstrap/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link href="../../../vendors/fontawesome/css/all.css" rel="stylesheet" />
+  </head>
+  <body>
+    <!-- Body -->
+    <div class="wd-container">
+      <!-- Kanbas Navigation Sidebar -->
+      <div class="wd-main-sidebar">
+        <ul>
+          <li>
+            <div class="wd-logo">
+              <a href="../../index.html"
+                ><img src="../../../images/neu-logo.png"
+              /></a>
+            </div>
+          </li>
+          <li>
+            <a href="../../account/profile/index.html"
+              ><i class="fas fa-user" style="color: lightgray"></i
+              ><span>Account</span></a
+            >
+          </li>
+          <li>
+            <a href="../../dashboard/index.html"
+              ><i class="fas fa-home"></i> <span>Dashboard</span></a
+            >
+          </li>
+          <li>
+            <a href="../home/index.html" class="selected"
+              ><i class="fas fa-book"></i> <span>Courses</span></a
+            >
+          </li>
+          <li>
+            <a href="#"
+              ><i class="fas fa-calendar"></i> <span>Calendar</span></a
+            >
+          </li>
+          <li>
+            <a href="#"><i class="fas fa-inbox"></i> <span>Inbox</span></a>
+          </li>
+          <li>
+            <a href="#"><i class="fas fa-history"></i> <span>History</span></a>
+          </li>
+          <li>
+            <a href="#"><i class="fas fa-cube"></i> <span>Studio</span></a>
+          </li>
+          <li>
+            <a href="#"><i class="fas fa-users"></i> <span>Commons</span></a>
+          </li>
+          <li>
+            <a href="#"
+              ><i class="fas fa-question-circle"></i> <span>Help</span></a
+            >
+          </li>
+        </ul>
+      </div>
+
+      <div class="wd-main-content">
+        <!-- Header "HOME" -->
+        <div class="wd-header">
+          <!-- Student View Button -->
+          <button class="btn btn-light btn-sm float-end">
+            <i class="fas fa-glasses"></i> Student View
+          </button>
+
+          <!-- Header Breadcrumb -->
+          <nav aria-label="breadcrumb">
+            <ol class="breadcrumb wd-breadcrumb">
+              <li>
+                <i class="fas fa-bars breadcrumb-icon wd-breadcrumb-icon"></i>
+              </li>
+              <li class="breadcrumb-item wd-breadcrumb-item">
+                <a href="#">CS5610.11744.202310</a>
+              </li>
+              <li class="breadcrumb-item active" aria-current="page">
+                Assignments
+              </li>
+            </ol>
+          </nav>
+
+          <hr />
+        </div>
+
+        <div class="wd-content-row me-4">
+          <!-- Course Navigation Sidebar -->
+          <div class="wd-courses-sidebar">
+            <ul>
+              <li><a href="../home/index.html">Home</a></li>
+              <li><a href="#">Modules</a></li>
+              <li><a href="#">Piazza</a></li>
+              <li><a href="#">Zoom Meetings</a></li>
+              <li>
+                <a href="index.html" class="selected">Assignments</a>
+              </li>
+              <li><a href="#">Quizzes</a></li>
+              <li><a href="../grades/index.html">Grades</a></li>
+              <li><a href="#">People</a></li>
+              <li><a href="#">Panopto Video</a></li>
+              <li><a href="#">Discussions</a></li>
+              <li><a href="#">Announcements</a></li>
+              <li><a href="#">Pages</a></li>
+              <li><a href="#">Files</a></li>
+              <li><a href="#">Rubrics</a></li>
+              <li><a href="#">Outcomes</a></li>
+              <li><a href="#">Collaborations</a></li>
+              <li><a href="#">Syllabus</a></li>
+              <li><a href="#">Settings</a></li>
+            </ul>
+          </div>
+
+          <div class="wd-modules-column">
+            <!-- Assignment Search Bar -->
+            <input
+              type="text"
+              class="form-control w-25 float-start"
+              id="search-assignment"
+              placeholder="Search for Assignment"
+            />
+            <!-- Action Buttons -->
+            <div class="wd-action-buttons">
+              <button class="btn btn-light btn-sm">
+                <i class="fas fa-plus me-2"></i>Group
+              </button>
+              <button class="btn btn-danger btn-sm">
+                <i class="fas fa-plus me-2"></i>Module
+              </button>
+              <button class="btn btn-light btn-sm">
+                <i class="fas fa-ellipsis-v more-icon"></i>
+              </button>
+            </div>
+            <hr />
+
+            <!-- Assignment Modules Section -->
+            <div class="wd-modules">
+              <!-- Module 1 -->
+              <div class="list-group my-5">
+                <!-- Assignment Header -->
+                <div class="list-group-item list-group-item-secondary py-3">
+                  <i class="fas fa-grip-vertical me-3"></i>Assignments
+                  <div class="float-end">
+                    <span class="rounded-pill p-2 border border-secondary me-2"
+                      >40% of total</span
+                    >
+                    <i class="fas fa-plus me-3"></i>
+                    <i class="fas fa-ellipsis-v"></i>
+                  </div>
+                </div>
+
+                <!-- Assignment Items -->
+                <!-- Assignment Item 1 -->
+                <div
+                  class="list-group-item wd-left-green-border d-flex align-items-center"
+                >
+                  <i class="fas fa-grip-vertical me-3"></i>
+                  <i class="fas fa-pencil-alt wd-green-icon me-5"></i>
+
+                  <div class="flex-grow-1">
+                    <div class="row wd-assignment-title">
+                      <a href="edit.html" class="p-0 mt-1">A1 Setup</a>
+                    </div>
+                    <div class="row">
+                      <p class="wd-assignment-description p-0 m-0">
+                        Week 0 - SETUP - Week starting on Monday September 5th
+                        (9/5/2022) Module |
+                      </p>
+                    </div>
+                    <div class="row">
+                      <p class="wd-assignment-description p-0 mb-1">
+                        Due: Sep 18, 2022 at 11:59pm | 100 pts
+                      </p>
+                    </div>
+                  </div>
+
+                  <div class="float-end">
+                    <i class="fas fa-check-circle wd-green-icon me-3"></i>
+                    <i class="fas fa-ellipsis-v"></i>
+                  </div>
+                </div>
+
+                <!-- Assignment Item 2 -->
+                <div
+                  class="list-group-item wd-left-green-border d-flex align-items-center"
+                >
+                  <i class="fas fa-grip-vertical me-3"></i>
+                  <i class="fas fa-pencil-alt wd-green-icon me-5"></i>
+
+                  <div class="flex-grow-1">
+                    <div class="row wd-assignment-title">
+                      <a href="edit.html" class="p-0 mt-1">A2 HTML</a>
+                    </div>
+                    <div class="row">
+                      <p class="wd-assignment-description p-0 m-0">
+                        Week 1 - HTML - Week starting on Monday September 12th
+                        (9/12/2022) Module |
+                      </p>
+                    </div>
+                    <div class="row">
+                      <p class="wd-assignment-description p-0 mb-1">
+                        Due: Sep 25, 2022 at 11:59pm | 100 pts
+                      </p>
+                    </div>
+                  </div>
+
+                  <div class="float-end">
+                    <i class="fas fa-check-circle wd-green-icon me-3"></i>
+                    <i class="fas fa-ellipsis-v"></i>
+                  </div>
+                </div>
+
+                <!-- Assignment Item 3 -->
+                <div
+                  class="list-group-item wd-left-green-border d-flex align-items-center"
+                >
+                  <i class="fas fa-grip-vertical me-3"></i>
+                  <i class="fas fa-pencil-alt wd-green-icon me-5"></i>
+
+                  <div class="flex-grow-1">
+                    <div class="row wd-assignment-title">
+                      <a href="edit.html" class="p-0 mt-1">A3 CSS</a>
+                    </div>
+                    <div class="row">
+                      <p class="wd-assignment-description p-0 m-0">
+                        Week 2 - CSS - Week starting on Monday September 19th
+                        (9/19/2022) Module |
+                      </p>
+                    </div>
+                    <div class="row">
+                      <p class="wd-assignment-description p-0 mb-1">
+                        Due: Oct 10, 2022 at 11:59pm | 100 pts
+                      </p>
+                    </div>
+                  </div>
+
+                  <div class="float-end">
+                    <i class="fas fa-check-circle wd-green-icon me-3"></i>
+                    <i class="fas fa-ellipsis-v"></i>
+                  </div>
+                </div>
+
+                <!-- Assignment Item 4 -->
+                <div
+                  class="list-group-item wd-left-green-border d-flex align-items-center"
+                >
+                  <i class="fas fa-grip-vertical me-3"></i>
+                  <i class="fas fa-pencil-alt wd-green-icon me-5"></i>
+
+                  <div class="flex-grow-1">
+                    <div class="row wd-assignment-title">
+                      <a href="edit.html" class="p-0 mt-1">A4 BOOTSTRAP</a>
+                    </div>
+                    <div class="row">
+                      <p class="wd-assignment-description p-0 m-0">
+                        Week 3 - BOOTSTRAP - Week starting on Monday September
+                        26th (9/26/2022) Module |
+                      </p>
+                    </div>
+                    <div class="row">
+                      <p class="wd-assignment-description p-0 mb-1">
+                        Due: Oct 10, 2022 at 11:59pm | 100 pts
+                      </p>
+                    </div>
+                  </div>
+
+                  <div class="float-end">
+                    <i class="fas fa-check-circle wd-green-icon me-3"></i>
+                    <i class="fas fa-ellipsis-v"></i>
+                  </div>
+                </div>
+
+                <!-- Assignment Item 5 -->
+                <div
+                  class="list-group-item wd-left-green-border d-flex align-items-center"
+                >
+                  <i class="fas fa-grip-vertical me-3"></i>
+                  <i class="fas fa-pencil-alt wd-green-icon me-5"></i>
+
+                  <div class="flex-grow-1">
+                    <div class="row wd-assignment-title">
+                      <a href="edit.html" class="p-0 mt-1">A5 JAVASCRIPT</a>
+                    </div>
+                    <div class="row">
+                      <p class="wd-assignment-description p-0 m-0">
+                        Week 4 - JavaScript - Week starting on Monday October
+                        3rd (10/3/2022) Module |
+                      </p>
+                    </div>
+                    <div class="row">
+                      <p class="wd-assignment-description p-0 mb-1">
+                        Due: Oct 16, 2022 at 11:59pm | 100 pts
+                      </p>
+                    </div>
+                  </div>
+
+                  <div class="float-end">
+                    <i class="fas fa-check-circle wd-green-icon me-3"></i>
+                    <i class="fas fa-ellipsis-v"></i>
+                  </div>
+                </div>
+
+                <!-- Assignment Item 6 -->
+                <div
+                  class="list-group-item wd-left-green-border d-flex align-items-center"
+                >
+                  <i class="fas fa-grip-vertical me-3"></i>
+                  <i class="fas fa-pencil-alt wd-green-icon me-5"></i>
+
+                  <div class="flex-grow-1">
+                    <div class="row wd-assignment-title">
+                      <a href="edit.html" class="p-0 mt-1">A6 REACT</a>
+                    </div>
+                    <div class="row">
+                      <p class="wd-assignment-description p-0 m-0">
+                        Week 5 - Recat & Routing - Week starting on Monday
+                        October 23rd (10/10/2022) Module |
+                      </p>
+                    </div>
+                    <div class="row">
+                      <p class="wd-assignment-description p-0 mb-1">
+                        Due: Oct 23, 2022 at 11:59pm | 100 pts
+                      </p>
+                    </div>
+                  </div>
+
+                  <div class="float-end">
+                    <i class="fas fa-check-circle wd-green-icon me-3"></i>
+                    <i class="fas fa-ellipsis-v"></i>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
