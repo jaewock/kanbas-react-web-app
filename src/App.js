@@ -12,12 +12,12 @@ function App() {
             </a>
           </li>
           <li>
-            <a href="https://nimble-bavarois-bc9ae2.netlify.app/labs/a2/index">
+            <a href="https://a2--nimble-bavarois-bc9ae2.netlify.app/labs/a2/index">
               Lab 2
             </a>
           </li>
           <li>
-            <a href="https://nimble-bavarois-bc9ae2.netlify.app/kanbas/index">
+            <a href="https://a2--nimble-bavarois-bc9ae2.netlify.app/kanbas/index">
               Assignment 2 - Menu
             </a>
           </li>
