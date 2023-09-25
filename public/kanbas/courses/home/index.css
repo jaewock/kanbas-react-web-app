@@ -89,86 +89,67 @@
   font-size: 12px;
 }
 
+/* When kanbas navigation toggle button is pressed*/
+.wd-kanbas-nav-toggle:checked ~ .wd-small-screen-header {
+  display: none !important;
+}
+
+.wd-kanbas-nav-toggle:checked ~ .wd-small-screen-header-kanbas {
+  display: block !important;
+}
+
+.wd-kanbas-nav-toggle:checked ~ .container-fluid .wd-main-content {
+  display: none !important;
+}
+
+.wd-kanbas-nav-toggle:checked ~ .container-fluid .wd-main-sidebar {
+  display: flex !important;
+  background-color: white;
+}
+
+.wd-kanbas-nav-toggle:checked ~ .container-fluid .wd-main-sidebar .wd-logo {
+  display: none !important;
+}
+
+.wd-kanbas-nav-toggle:checked ~ .container-fluid .wd-main-sidebar span {
+  color: red !important;
+}
+
+/* When course navigation toggle button is pressed*/
+.wd-course-nav-toggle:checked ~ .wd-small-screen-header {
+  display: none !important;
+}
+
+.wd-course-nav-toggle:checked ~ .wd-small-screen-header-courses {
+  display: flex !important;
+}
+
+.wd-course-nav-toggle:checked ~ .container-fluid .wd-courses-sidebar {
+  display: block !important;
+}
+
+.wd-course-nav-toggle:checked ~ .container-fluid .wd-header {
+  display: none !important;
+}
+
+.wd-course-nav-toggle:checked ~ .container-fluid .wd-modules-column {
+  display: none !important;
+}
+
 /* Media query for narrower screens */
 @media (max-width: 992px) {
-  /* Display settings when screen gets narrow */
-  .wd-main-sidebar {
-    display: block;
-  }
-
+  /* Display settings when screen goes below L size*/
   .wd-modules-column {
     width: 100%;
     padding-right: 30px;
-  }
-
-  .wd-other-column {
-    display: none;
   }
 }
 
 /* Media query for even narrower screens */
 @media (max-width: 768px) {
-  /* Display settings when screen gets even narrower */
-  .wd-main-sidebar {
-    display: none;
-  }
-
-  .wd-courses-sidebar {
-    display: none;
-  }
-
+  /* Display settings when screen goes below M size */
   .wd-modules-column {
     display: 100%;
     padding-left: 30px;
-  }
-
-  .wd-other-column {
-    display: none;
-  }
-
-  .wd-container .wd-header {
-    display: none;
-  }
-
-  .wd-small-screen-header {
-    display: flex;
-  }
-
-  /* When kanbas navigation toggle button is pressed*/
-  .wd-kanbas-nav-toggle:checked ~ .wd-small-screen-header {
-    display: none;
-  }
-
-  .wd-kanbas-nav-toggle:checked ~ .wd-small-screen-header-kanbas {
-    display: block;
-  }
-
-  .wd-kanbas-nav-toggle:checked ~ .wd-container .wd-main-sidebar {
-    display: block;
-  }
-
-  .wd-kanbas-nav-toggle:checked ~ .wd-container .wd-main-content {
-    display: none;
-  }
-
-  /* When course navigation toggle button is pressed*/
-  .wd-course-nav-toggle:checked ~ .wd-small-screen-header {
-    display: none;
-  }
-
-  .wd-course-nav-toggle:checked ~ .wd-small-screen-header-courses {
-    display: flex;
-  }
-
-  .wd-course-nav-toggle:checked ~ .wd-container .wd-courses-sidebar {
-    display: block;
-  }
-
-  .wd-course-nav-toggle:checked ~ .wd-container .wd-header {
-    display: none;
-  }
-
-  .wd-course-nav-toggle:checked ~ .wd-container .wd-modules-column {
-    display: none;
   }
 }

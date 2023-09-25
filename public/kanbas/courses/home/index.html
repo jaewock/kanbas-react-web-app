@@ -15,7 +15,7 @@
     <input type="checkbox" class="wd-kanbas-nav-toggle" id="kanbasToggle" />
     <input type="checkbox" class="wd-course-nav-toggle" id="courseToggle" />
     <!--Small screen header with no option selected-->
-    <header class="wd-small-screen-header p-3 mb-3">
+    <header class="wd-small-screen-header d-flex d-md-none p-3 mb-3">
       <div class="wd-left-icon">
         <label for="kanbasToggle">
           <i class="fas fa-bars ms-2"></i>
@@ -68,9 +68,9 @@
     </header>
 
     <!-- Body -->
-    <div class="wd-container">
+    <div class="container-fluid">
       <!-- Kanbas Navigation Sidebar -->
-      <div class="wd-main-sidebar">
+      <div class="wd-main-sidebar d-none d-sm-none d-md-block">
         <ul>
           <li>
             <div class="wd-logo">
@@ -122,7 +122,7 @@
 
       <div class="wd-main-content">
         <!-- Header "HOME" -->
-        <div class="wd-header">
+        <div class="wd-header d-none d-md-block">
           <!-- Student View Button -->
           <button class="btn btn-light btn-sm float-end">
             <i class="fas fa-glasses"></i> Student View
@@ -145,7 +145,7 @@
 
         <div class="wd-content-row">
           <!-- Course Navigation Sidebar -->
-          <div class="wd-courses-sidebar">
+          <div class="wd-courses-sidebar d-none d-md-block">
             <ul>
               <li><a href="index.html" class="selected">Home</a></li>
               <li><a href="#">Modules</a></li>
@@ -400,7 +400,7 @@
           </div>
 
           <!-- Last column -->
-          <div class="wd-other-column me-3">
+          <div class="wd-other-column d-none d-lg-block me-3">
             <div class="wd-other-column-content">
               <!--Course Status with Buttons-->
               <p class="m-0">Course Status</p>
