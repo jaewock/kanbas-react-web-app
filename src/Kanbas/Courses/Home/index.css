@@ -1,0 +1,23 @@
+.wd-additional-links-buttons {
+  margin-left: 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.wd-additional-links-buttons button {
+  border: 1px solid lightgray;
+}
+
+.wd-icon-with-text {
+  display: flex;
+}
+
+.wd-text-red {
+  color: red;
+}
+
+.wd-text-gray {
+  color: gray;
+  font-size: 12px;
+}

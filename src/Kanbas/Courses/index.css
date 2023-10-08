@@ -1,0 +1,14 @@
+.wd-course-header {
+  font-size: 20px;
+  color: red;
+  margin: 20px;
+}
+
+.breadcrumb-separator {
+  color: gray;
+  margin-inline: 10px;
+}
+
+.breadcrumb-item.active {
+  color: black;
+}

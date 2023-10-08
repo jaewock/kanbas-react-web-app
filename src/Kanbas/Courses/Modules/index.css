@@ -1,0 +1,13 @@
+.list-group-item {
+  width: 850px;
+  height: 70px;
+}
+
+.wd-green-icon {
+  color: green;
+}
+
+.wd-action-buttons button {
+  border: 1px solid lightgray;
+  margin-left: 5px;
+}

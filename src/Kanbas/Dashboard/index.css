@@ -1,0 +1,41 @@
+.card {
+  width: 250px;
+  border-radius: 5px;
+  border-color: lightgray;
+  margin: 0 20px 20px 0;
+}
+
+.wd-card-top {
+  height: 125px;
+}
+
+.wd-card-bottom {
+  height: 125px;
+  padding: 10px 15px;
+  background-color: white;
+}
+
+.wd-course-link {
+  text-decoration: none;
+  font-size: 15px;
+}
+
+.wd-course-description {
+  margin-top: 3px;
+  color: gray;
+  font-size: 15px;
+}
+
+.wd-more-icon {
+  font-size: 20px;
+  color: white;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
+
+.wd-info-icon {
+  padding-top: 10px;
+  font-size: 24px;
+  color: gray;
+}
