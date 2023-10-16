@@ -1,11 +1,17 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { FaEllipsisV, FaPencilAlt } from "react-icons/fa";
-import db from "../Database";
+import { FaEllipsisV, FaPencilAlt, FaTrash } from "react-icons/fa";
 import "./index.css";
+import db from "../Database";
 
-function Dashboard() {
-  const courses = db.courses;
+function Dashboard({
+  courses,
+  course,
+  setCourse,
+  addNewCourse,
+  deleteCourse,
+  updateCourse,
+}) {
   const backgroundColors = db.backgroundColors;
 
   return (
@@ -16,6 +22,43 @@ function Dashboard() {
         <div>
           <h3>{`Published Courses (${courses.length})`}</h3>
         </div>
+        <hr className="mb-4" />
+
+        <div className="wd-add-update-course">
+          <h5>Add or Update Course</h5>
+          <input
+            value={course.name}
+            className="form-control mb-2"
+            onChange={(e) => setCourse({ ...course, name: e.target.value })}
+          />
+          <input
+            value={course.number}
+            className="form-control mb-2"
+            onChange={(e) => setCourse({ ...course, number: e.target.value })}
+          />
+          <input
+            value={course.startDate}
+            className="form-control mb-2"
+            type="date"
+            onChange={(e) =>
+              setCourse({ ...course, startDate: e.target.value })
+            }
+          />
+          <input
+            value={course.endDate}
+            className="form-control mb-2"
+            type="date"
+            onChange={(e) => setCourse({ ...course, endDate: e.target.value })}
+          />
+
+          <button className="btn btn-success me-2" onClick={addNewCourse}>
+            Add
+          </button>
+          <button className="btn btn-primary" onClick={updateCourse}>
+            Update
+          </button>
+        </div>
+
         <hr className="mb-4" />
 
         <div className="d-flex flex-row flex-wrap">
@@ -40,7 +83,20 @@ function Dashboard() {
                   <br />
                   {`${course.startDate} to ${course.endDate}`}
                   <br />
-                  <FaPencilAlt className="pencil-icon wd-info-icon" />
+                  <FaPencilAlt
+                    className="pencil-icon wd-info-icon"
+                    onClick={(event) => {
+                      event.preventDefault();
+                      setCourse(course);
+                    }}
+                  />
+                  <FaTrash
+                    className="trash-icon wd-info-icon"
+                    onClick={(event) => {
+                      event.preventDefault();
+                      deleteCourse(course._id);
+                    }}
+                  />
                 </p>
               </div>
             </div>

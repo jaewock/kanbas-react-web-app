@@ -1,3 +1,4 @@
+// Assignments.js
 import React from "react";
 import { Link, useParams } from "react-router-dom";
 import {
@@ -7,15 +8,24 @@ import {
   FaPencilAlt,
   FaGripVertical,
 } from "react-icons/fa";
-import db from "../../Database";
+import { useDispatch, useSelector } from "react-redux";
+import { deleteAssignment, selectAssignment } from "./assignmentsReducer";
 import "./index.css";
 
 function Assignments() {
   const { courseId } = useParams();
-  const assignments = db.assignments;
-  const courseAssignments = assignments.filter(
-    (assignment) => assignment.course === courseId
+  const dispatch = useDispatch();
+  const assignments = useSelector(
+    (state) => state.assignmentsReducer.assignments
   );
+
+  const handleAddAssignment = () => {
+    dispatch(selectAssignment(null));
+  };
+
+  const handleDeleteAssignment = (assignmentId) => {
+    dispatch(deleteAssignment(assignmentId));
+  };
 
   return (
     <div>
@@ -32,10 +42,15 @@ function Assignments() {
               <FaPlus className="me-2" />
               Group
             </button>
-            <button className="btn btn-danger btn-sm">
-              <FaPlus className="me-2" />
-              Assignment
-            </button>
+            <Link to={`/Kanbas/Courses/${courseId}/Assignments/Editor`}>
+              <button
+                className="btn btn-danger btn-sm"
+                onClick={handleAddAssignment}
+              >
+                <FaPlus className="me-2" />
+                Assignment
+              </button>
+            </Link>
             <button className="btn btn-light btn-sm">
               <FaEllipsisV className="more-icon" />
             </button>
@@ -56,16 +71,11 @@ function Assignments() {
             </div>
           </div>
 
-          {courseAssignments.map((assignment) => (
-            <Link
-              key={assignment._id}
-              to={`/Kanbas/Courses/${courseId}/Assignments/${assignment._id}`}
-              className="list-group-item p-0"
-            >
+          {assignments.map((assignment) => (
+            <div key={assignment._id} className="list-group-item p-0">
               <div className="list-group-item wd-left-green-border d-flex align-items-center">
                 <FaGripVertical className="me-3" />
                 <FaPencilAlt className="wd-green-icon me-5" />
-
                 <div>
                   <div className="row">
                     <strong className="p-0">
@@ -74,7 +84,7 @@ function Assignments() {
                   </div>
                   <div className="row">
                     <p className="wd-assignment-description p-0 mb-1">
-                      Due: Sep 18, 2022 at 11:59pm | 100 pts
+                      Due: {assignment.dueDate} | {assignment.points} pts
                     </p>
                   </div>
                 </div>
@@ -82,9 +92,15 @@ function Assignments() {
                 <div className="ms-auto">
                   <FaCheckCircle className="wd-green-icon me-3" />
                   <FaEllipsisV />
+                  <button
+                    className="btn btn-danger btn-sm ms-2"
+                    onClick={() => handleDeleteAssignment(assignment._id)}
+                  >
+                    Delete
+                  </button>
                 </div>
               </div>
-            </Link>
+            </div>
           ))}
         </div>
       </div>

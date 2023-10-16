@@ -39,3 +39,11 @@
   font-size: 24px;
   color: gray;
 }
+
+.wd-add-update-course {
+  width: 500px;
+}
+
+.wd-add-update-course button {
+  border: 1px solid lightgray;
+}
