@@ -1,0 +1,20 @@
+.wd-courses-list-group-item {
+  background-color: white;
+  color: red;
+  text-decoration: none;
+  display: flex;
+  align-items: flex-start;
+  padding-bottom: 15px;
+}
+
+.wd-courses-list-group-item.active {
+  color: black;
+}
+
+.wd-courses-list-group-item.active::before {
+  content: "";
+  border-left: 2px solid black;
+  height: 25px;
+  position: relative;
+  left: -5px; /* Adjusted margin-left */
+}

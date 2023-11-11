@@ -1,0 +1,513 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link href="../../index.css" rel="stylesheet" />
+    <link href="../index.css" rel="stylesheet" />
+    <link href="index.css" rel="stylesheet" />
+    <link
+      href="../../../vendors/bootstrap/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link href="../../../vendors/fontawesome/css/all.css" rel="stylesheet" />
+  </head>
+  <body>
+    <!--Checkboxes that have visibility disabled to toggle visiblity of navigation columns-->
+    <input type="checkbox" class="wd-kanbas-nav-toggle" id="kanbasToggle" />
+    <input type="checkbox" class="wd-course-nav-toggle" id="courseToggle" />
+    <!--Small screen header with no option selected-->
+    <header class="wd-small-screen-header d-flex d-md-none p-3 mb-3">
+      <div class="wd-left-icon">
+        <label for="kanbasToggle">
+          <i class="fas fa-bars ms-2"></i>
+        </label>
+      </div>
+      <div class="wd-col">
+        <div class="row">
+          <div class="col">CS4550.12631.202410</div>
+        </div>
+        <div class="row">
+          <div class="col">Modules</div>
+        </div>
+      </div>
+      <div class="wd-right-icons">
+        <i class="fas fa-glasses me-2"></i>
+        <label for="courseToggle">
+          <i class="fas fa-chevron-down me-2"></i>
+        </label>
+      </div>
+    </header>
+
+    <!--Small screen header with kanbas navigation menu option selected-->
+    <header class="wd-small-screen-header-kanbas">
+      <div class="float-end">
+        <label for="kanbasToggle">
+          <i class="fas fa-times m-3"></i>
+        </label>
+      </div>
+    </header>
+
+    <!--Small screen header with course navigation menu option selected-->
+    <header class="wd-small-screen-header-courses p-3 mb-3">
+      <div class="wd-left-icon">
+        <i class="fas fa-bars ms-2"></i>
+      </div>
+      <div class="wd-col">
+        <div class="row">
+          <div class="col">CS4550.12631.202410</div>
+        </div>
+        <div class="row">
+          <div class="col">Modules</div>
+        </div>
+      </div>
+      <div class="wd-right-icons">
+        <i class="fas fa-glasses me-2"></i>
+        <label for="courseToggle">
+          <i class="fas fa-times me-2"></i>
+        </label>
+      </div>
+    </header>
+
+    <!-- Body -->
+    <div class="container-fluid">
+      <!-- Kanbas Navigation Sidebar -->
+      <div class="wd-main-sidebar d-none d-sm-none d-md-block">
+        <ul>
+          <li>
+            <div class="wd-logo">
+              <a href="../../index.html"
+                ><img src="../../../images/neu-logo.png"
+              /></a>
+            </div>
+          </li>
+          <li>
+            <a href="../../account/profile/index.html"
+              ><i class="fas fa-user" style="color: lightgray"></i
+              ><span>Account</span></a
+            >
+          </li>
+          <li>
+            <a href="../../dashboard/index.html"
+              ><i class="fas fa-home"></i> <span>Dashboard</span></a
+            >
+          </li>
+          <li>
+            <a href="index.html" class="selected"
+              ><i class="fas fa-book"></i> <span>Courses</span></a
+            >
+          </li>
+          <li>
+            <a href="#"
+              ><i class="fas fa-calendar"></i> <span>Calendar</span></a
+            >
+          </li>
+          <li>
+            <a href="#"><i class="fas fa-inbox"></i> <span>Inbox</span></a>
+          </li>
+          <li>
+            <a href="#"><i class="fas fa-history"></i> <span>History</span></a>
+          </li>
+          <li>
+            <a href="#"><i class="fas fa-cube"></i> <span>Studio</span></a>
+          </li>
+          <li>
+            <a href="#"><i class="fas fa-users"></i> <span>Commons</span></a>
+          </li>
+          <li>
+            <a href="#"
+              ><i class="fas fa-question-circle"></i> <span>Help</span></a
+            >
+          </li>
+        </ul>
+      </div>
+
+      <div class="wd-main-content">
+        <!-- Header "HOME" -->
+        <div class="wd-header d-none d-md-block">
+          <!-- Student View Button -->
+          <button class="btn btn-light btn-sm float-end">
+            <i class="fas fa-glasses"></i> Student View
+          </button>
+
+          <!-- Header Breadcrumb -->
+          <nav aria-label="breadcrumb">
+            <ol class="breadcrumb wd-breadcrumb">
+              <li>
+                <i class="fas fa-bars breadcrumb-icon wd-breadcrumb-icon"></i>
+              </li>
+              <li class="breadcrumb-item wd-breadcrumb-item">
+                <a href="#">CS4550.12631.202410</a>
+              </li>
+              <li class="breadcrumb-item active" aria-current="page">Home</li>
+            </ol>
+          </nav>
+          <hr />
+        </div>
+
+        <div class="wd-content-row">
+          <!-- Course Navigation Sidebar -->
+          <div class="wd-courses-sidebar d-none d-md-block">
+            <ul>
+              <li><a href="index.html" class="selected">Home</a></li>
+              <li><a href="#">Modules</a></li>
+              <li><a href="#">Piazza</a></li>
+              <li><a href="#">Zoom Meetings</a></li>
+              <li><a href="../assignments/index.html">Assignments</a></li>
+              <li><a href="#">Quizzes</a></li>
+              <li><a href="../grades/index.html">Grades</a></li>
+              <li><a href="#">People</a></li>
+              <li><a href="#">Panopto Video</a></li>
+              <li><a href="#">Discussions</a></li>
+              <li><a href="#">Announcements</a></li>
+              <li><a href="#">Pages</a></li>
+              <li><a href="#">Files</a></li>
+              <li><a href="#">Rubrics</a></li>
+              <li><a href="#">Outcomes</a></li>
+              <li><a href="#">Collaborations</a></li>
+              <li><a href="#">Syllabus</a></li>
+              <li><a href="#">Settings</a></li>
+            </ul>
+          </div>
+
+          <!-- Main Content Column -->
+          <div class="wd-modules-column">
+            <!-- Action Buttons -->
+            <div class="wd-action-buttons">
+              <!-- Collapse All and View Progress Buttons-->
+              <button class="btn btn-light btn-sm">Collapse All</button>
+              <button class="btn btn-light btn-sm">View Progress</button>
+
+              <!-- 'Publish All' Dropdown-->
+              <div class="dropdown">
+                <button
+                  class="btn btn-light dropdown-toggle btn-sm"
+                  type="button"
+                  data-bs-toggle="dropdown"
+                >
+                  <i class="fas fa-check-circle wd-green-icon me-2"></i>Publish
+                  All
+                </button>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="#">Option 1</a></li>
+                  <li><a class="dropdown-item" href="#">Option 2</a></li>
+                </ul>
+              </div>
+
+              <!-- Module and More Options Buttons -->
+              <button class="btn btn-danger btn-sm">
+                <i class="fas fa-plus me-2"></i>Module
+              </button>
+              <button class="btn btn-light btn-sm">
+                <i class="fas fa-ellipsis-v more-icon"></i>
+              </button>
+            </div>
+            <hr />
+
+            <!-- Modules Section -->
+            <div class="wd-modules">
+              <!-- Module 1 -->
+              <div class="list-group my-5">
+                <!-- Module Header -->
+                <div class="list-group-item list-group-item-secondary py-3">
+                  <i class="fas fa-grip-vertical me-3"></i>Week 0 - INTRO
+                  <div class="float-end">
+                    <i class="fas fa-check-circle wd-green-icon me-3"></i>
+                    <i class="fas fa-plus me-3"></i>
+                    <i class="fas fa-ellipsis-v"></i>
+                  </div>
+                </div>
+
+                <!-- Module Body -->
+                <div class="list-group-item wd-left-green-border">
+                  <i class="fas fa-grip-vertical me-3"></i>LEARNING OBJECTIVES
+                  <div class="float-end">
+                    <i class="fas fa-check-circle wd-green-icon me-3"></i>
+                    <i class="fas fa-ellipsis-v"></i>
+                  </div>
+                </div>
+                <div class="list-group-item wd-left-green-border">
+                  <i class="fas fa-grip-vertical me-5"></i>Introduction to the
+                  course
+                  <div class="float-end">
+                    <i class="fas fa-check-circle wd-green-icon me-3"></i>
+                    <i class="fas fa-ellipsis-v"></i>
+                  </div>
+                </div>
+                <div class="list-group-item wd-left-green-border">
+                  <i class="fas fa-grip-vertical me-5"></i>Learn what is Web
+                  Development
+                  <div class="float-end">
+                    <i class="fas fa-check-circle wd-green-icon me-3"></i>
+                    <i class="fas fa-ellipsis-v"></i>
+                  </div>
+                </div>
+
+                <div class="list-group-item wd-left-green-border">
+                  <i class="fas fa-grip-vertical me-3"></i>READING
+                  <div class="float-end">
+                    <i class="fas fa-check-circle wd-green-icon me-3"></i>
+                    <i class="fas fa-ellipsis-v"></i>
+                  </div>
+                </div>
+                <div class="list-group-item wd-left-green-border">
+                  <i class="fas fa-grip-vertical me-5"></i>Full Stack Developer
+                  - Chapter 1 - Introduction
+                  <div class="float-end">
+                    <i class="fas fa-check-circle wd-green-icon me-3"></i>
+                    <i class="fas fa-ellipsis-v"></i>
+                  </div>
+                </div>
+                <div class="list-group-item wd-left-green-border">
+                  <i class="fas fa-grip-vertical me-5"></i>Full Stack Developer
+                  - Chapter 2 - Creating User Interfaces With HTML
+                  <div class="float-end">
+                    <i class="fas fa-check-circle wd-green-icon me-3"></i>
+                    <i class="fas fa-ellipsis-v"></i>
+                  </div>
+                </div>
+
+                <div class="list-group-item wd-left-green-border">
+                  <i class="fas fa-grip-vertical me-3"></i>SLIDES
+                  <div class="float-end">
+                    <i class="fas fa-check-circle wd-green-icon me-3"></i>
+                    <i class="fas fa-ellipsis-v"></i>
+                  </div>
+                </div>
+                <div class="list-group-item wd-left-green-border">
+                  <i class="fas fa-grip-vertical me-3"></i
+                  ><i class="fas fa-link me-3"></i
+                  ><a
+                    href="https://docs.google.com/presentation/d/1yb_fQd5MhVuFczb5F5II0CoDkVJALFqxUnuwPAXiOAU/edit#slide=id.g40a3481019_0_0"
+                    >Introduction to Web Development
+                    <i class="fas fa-arrow-right"></i>
+                  </a>
+                  <div class="float-end">
+                    <i class="fas fa-check-circle wd-green-icon me-3"></i>
+                    <i class="fas fa-ellipsis-v"></i>
+                  </div>
+                </div>
+                <div class="list-group-item wd-left-green-border">
+                  <i class="fas fa-grip-vertical me-3"></i
+                  ><i class="fas fa-link me-3"></i
+                  ><a
+                    href="https://docs.google.com/presentation/d/16yDwIH8np-tQL85g4bpmrsDfO8LaW38jr-fMQirLnoQ/edit#slide=id.p"
+                    >Creating an HTTP server with Node.js
+                    <i class="fas fa-arrow-right"></i>
+                  </a>
+                  <div class="float-end">
+                    <i class="fas fa-check-circle wd-green-icon me-3"></i>
+                    <i class="fas fa-ellipsis-v"></i>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Module 2-->
+              <div class="list-group mt-5">
+                <!-- Module Header -->
+                <div class="list-group-item list-group-item-secondary py-3">
+                  <i class="fas fa-grip-vertical me-3"></i>Week 1 - HTML
+                  <div class="float-end">
+                    <i class="fas fa-check-circle wd-green-icon me-3"></i>
+                    <i class="fas fa-plus me-3"></i>
+                    <i class="fas fa-ellipsis-v"></i>
+                  </div>
+                </div>
+
+                <!-- Module Body -->
+                <div class="list-group-item wd-left-green-border">
+                  <i class="fas fa-grip-vertical me-3"></i>LEARNING OBJECTIVES
+                  <div class="float-end">
+                    <i class="fas fa-check-circle wd-green-icon me-3"></i>
+                    <i class="fas fa-ellipsis-v"></i>
+                  </div>
+                </div>
+                <div class="list-group-item wd-left-green-border">
+                  <i class="fas fa-grip-vertical me-5"></i>Learn how to create
+                  user interfaces with HTML
+                  <div class="float-end">
+                    <i class="fas fa-check-circle wd-green-icon me-3"></i>
+                    <i class="fas fa-ellipsis-v"></i>
+                  </div>
+                </div>
+                <div class="list-group-item wd-left-green-border">
+                  <i class="fas fa-grip-vertical me-5"></i>Keep working on
+                  assignment 1
+                  <div class="float-end">
+                    <i class="fas fa-check-circle wd-green-icon me-3"></i>
+                    <i class="fas fa-ellipsis-v"></i>
+                  </div>
+                </div>
+
+                <div class="list-group-item wd-left-green-border">
+                  <i class="fas fa-grip-vertical me-3"></i>READING
+                  <div class="float-end">
+                    <i class="fas fa-check-circle wd-green-icon me-3"></i>
+                    <i class="fas fa-ellipsis-v"></i>
+                  </div>
+                </div>
+                <div class="list-group-item wd-left-green-border">
+                  <i class="fas fa-grip-vertical me-5"></i>Full Stack Developer
+                  - Chapter 1 - Introduction
+                  <div class="float-end">
+                    <i class="fas fa-check-circle wd-green-icon me-3"></i>
+                    <i class="fas fa-ellipsis-v"></i>
+                  </div>
+                </div>
+                <div class="list-group-item wd-left-green-border">
+                  <i class="fas fa-grip-vertical me-5"></i>Full Stack Developer
+                  - Chapter 2 - Creating User Interfaces With HTML
+                  <div class="float-end">
+                    <i class="fas fa-check-circle wd-green-icon me-3"></i>
+                    <i class="fas fa-ellipsis-v"></i>
+                  </div>
+                </div>
+
+                <div class="list-group-item wd-left-green-border">
+                  <i class="fas fa-grip-vertical me-3"></i>SLIDES
+                  <div class="float-end">
+                    <i class="fas fa-check-circle wd-green-icon me-3"></i>
+                    <i class="fas fa-ellipsis-v"></i>
+                  </div>
+                </div>
+                <div class="list-group-item wd-left-green-border">
+                  <i class="fas fa-grip-vertical me-3"></i
+                  ><i class="fas fa-link me-3"></i
+                  ><a
+                    href="https://docs.google.com/presentation/d/1EgHSRyWc5ylFgKEOaiKnQVTV3QT_FL2M6w3EjeKRh64/edit#slide=id.g4097894cfb_0_0"
+                    >Introduction to HTML and the DOM
+                    <i class="fas fa-arrow-right"></i>
+                  </a>
+                  <div class="float-end">
+                    <i class="fas fa-check-circle wd-green-icon me-3"></i>
+                    <i class="fas fa-ellipsis-v"></i>
+                  </div>
+                </div>
+                <div class="list-group-item wd-left-green-border">
+                  <i class="fas fa-grip-vertical me-3"></i
+                  ><i class="fas fa-link me-3"></i
+                  ><a
+                    href="https://docs.google.com/presentation/d/1RtMNp8HTDiGi-H8G-n1u67M3kL4BNRoopOXLG-fPZH0/edit#slide=id.g41cb8fe74c_0_5"
+                  >
+                    Formatting Web content with Headings and Paragraphs
+                    <i class="fas fa-arrow-right"></i>
+                  </a>
+                  <div class="float-end">
+                    <i class="fas fa-check-circle wd-green-icon me-3"></i>
+                    <i class="fas fa-ellipsis-v"></i>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Last column -->
+          <div class="wd-other-column d-none d-lg-block me-3">
+            <div class="wd-other-column-content">
+              <!--Course Status with Buttons-->
+              <p class="m-0">Course Status</p>
+              <div class="wd-course-status">
+                <button class="btn btn-light">
+                  <i class="fas fa-ban"></i>
+                  Unpublish
+                </button>
+                <button class="btn btn-success">
+                  <i class="fas fa-check-circle"></i>
+                  Published
+                </button>
+              </div>
+
+              <!--Buttons-->
+              <div class="wd-other-column-button mt-3">
+                <button class="btn btn-light">
+                  <i class="fas fa-upload me-2"></i>
+                  Import Existing Content
+                </button>
+              </div>
+              <div class="wd-other-column-button">
+                <button class="btn btn-light">
+                  <i class="fas fa-upload me-2"></i>
+                  Import from Commons
+                </button>
+              </div>
+              <div class="wd-other-column-button">
+                <button class="btn btn-light">
+                  <i class="fas fa-home me-2"></i>
+                  Choose Home Page
+                </button>
+              </div>
+              <div class="wd-other-column-button">
+                <button class="btn btn-light">
+                  <i class="fas fa-rss me-2"></i>
+                  View Course Stream
+                </button>
+              </div>
+              <div class="wd-other-column-button">
+                <button class="btn btn-light">
+                  <i class="fas fa-bullhorn me-2"></i>
+                  New Announcement
+                </button>
+              </div>
+              <div class="wd-other-column-button">
+                <button class="btn btn-light">
+                  <i class="fas fa-chart-bar me-2"></i>
+                  New Analytics
+                </button>
+              </div>
+              <div class="wd-other-column-button">
+                <button class="btn btn-light">
+                  <i class="fas fa-bell me-2"></i>
+                  View Course Notifications
+                </button>
+              </div>
+
+              <!--To Do Section-->
+              <h5 class="mt-3 mb-0">To Do</h5>
+              <hr class="mt-1 mb-1" />
+              <div class="wd-icon-with-text">
+                <span class="fa-stack fa-1x">
+                  <i class="fa fa-circle fa-stack-1x text-danger"></i>
+                  <p class="fa-stack-1x text-light">1</p>
+                </span>
+                <div class="wd-text-column">
+                  <a href="#">Grade A1 - ENV + HTML </a>
+                  <span class="wd-text-gray"
+                    >100 points * Sep 18 at 11:59pm</span
+                  >
+                </div>
+              </div>
+
+              <!--Coming Up Section-->
+              <h5 class="mt-3 mb-0">Coming Up</h5>
+              <hr class="mt-1 mb-2" />
+              <div class="wd-icon-with-text">
+                <i class="fas fa-calendar me-3"></i>
+                <div class="wd-text-column">
+                  <a href="#">Lecture </a>
+                  <span class="wd-text-gray">CS4550.12631.202410</span>
+                  <span class="wd-text-gray">Sep 11 at 11:45am</span>
+                </div>
+              </div>
+
+              <div class="wd-icon-with-text">
+                <i class="fas fa-calendar me-3"></i>
+                <div class="wd-text-column">
+                  <a href="#">CS5610 06 SP23 Lecture </a>
+                  <span class="wd-text-gray">CS4550.12631.202410</span>
+                  <span class="wd-text-gray">Sep 11 at 6pm</span>
+                </div>
+              </div>
+
+              <div class="wd-icon-with-text">
+                <i class="fas fa-calendar me-3"></i>
+                <div class="wd-text-column">
+                  <a href="#">CS5610 Web Development Summer 1 2023 - LECTURE</a>
+                  <span class="wd-text-gray">CS4550.12631.202410</span>
+                  <span class="wd-text-gray">Sep 11 at 7pm</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

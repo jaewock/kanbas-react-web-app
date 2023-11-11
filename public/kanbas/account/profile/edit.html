@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link href="../../index.css" rel="stylesheet" />
+    <link href="../../account/index.css" rel="stylesheet" />
+    <link href="index.css" rel="stylesheet" />
+    <link href="edit.css" rel="stylesheet" />
+    <link
+      href="../../../vendors/bootstrap/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link href="../../../vendors/fontawesome/css/all.css" rel="stylesheet" />
+  </head>
+  <body>
+    <div class="container-fluid">
+      <!-- Kanbas Navigation Sidebar-->
+      <div class="wd-main-sidebar">
+        <ul>
+          <li>
+            <div class="wd-logo">
+              <a href="../../index.html"
+                ><img src="../../../images/neu-logo.png"
+              /></a>
+            </div>
+          </li>
+          <li>
+            <a href="index.html" class="selected"
+              ><i class="fas fa-user" style="color: lightgray"></i
+              ><span>Account</span></a
+            >
+          </li>
+          <li>
+            <a href="../../dashboard/index.html"
+              ><i class="fas fa-home"></i> <span>Dashboard</span></a
+            >
+          </li>
+          <li>
+            <a href="../../courses/home/index.html"
+              ><i class="fas fa-book"></i> <span>Courses</span></a
+            >
+          </li>
+          <li>
+            <a href="#"
+              ><i class="fas fa-calendar"></i> <span>Calendar</span></a
+            >
+          </li>
+          <li>
+            <a href="#"><i class="fas fa-inbox"></i> <span>Inbox</span></a>
+          </li>
+          <li>
+            <a href="#"><i class="fas fa-history"></i> <span>History</span></a>
+          </li>
+          <li>
+            <a href="#"><i class="fas fa-cube"></i> <span>Studio</span></a>
+          </li>
+          <li>
+            <a href="#"><i class="fas fa-users"></i> <span>Commons</span></a>
+          </li>
+          <li>
+            <a href="#"
+              ><i class="fas fa-question-circle"></i> <span>Help</span></a
+            >
+          </li>
+        </ul>
+      </div>
+
+      <!-- Edit Profile Page Main Content-->
+      <div class="wd-main-content">
+        <!-- Header -->
+        <div class="wd-header">
+          <i class="fas fa-bars" style="color: red"></i> Jae Wook Kim's Profile
+          <hr />
+        </div>
+
+        <div class="wd-content-row">
+          <!-- Account Navigation Sidebar -->
+          <div class="wd-account-sidebar">
+            <ul>
+              <li><a href="#">Notifications</a></li>
+              <li><a href="index.html" class="selected">Profile</a></li>
+              <li><a href="#">Files</a></li>
+              <li><a href="#">Settings</a></li>
+              <li><a href="#">ePortfolios</a></li>
+              <li><a href="#">Shared Content</a></li>
+              <li><a href="#">The Hub</a></li>
+              <li><a href="#">Qwickly Course Tools</a></li>
+              <li><a href="#">Global Announcements</a></li>
+            </ul>
+          </div>
+
+          <!-- Edit Profile Column -->
+          <div class="wd-edit-profile mt-3">
+            <div class="wd-profile-header">
+              <i class="fas fa-user fa-6x" style="color: gray"></i>
+            </div>
+
+            <!-- Edit Profile Form -->
+            <form action="index.html">
+              <!-- Name, Pronouns, Title -->
+              <div class="form-group mt-2">
+                <label for="name"><h6>Name:*</h6></label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="name"
+                  placeholder="Enter your name"
+                />
+              </div>
+              <div class="form-group mt-2">
+                <label for="pronouns"><h6>Pronouns:</h6></label>
+                <select class="form-control" id="pronouns">
+                  <option value="he_him" selected>None</option>
+                  <option value="he_him">He/Him</option>
+                  <option value="she_her">She/Her</option>
+                  <option value="they_them">They/Them</option>
+                  <option value="other">Other</option>
+                </select>
+              </div>
+              <div class="form-group mt-2">
+                <label for="title"><h6>Title:</h6></label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="title"
+                  placeholder="Enter your title"
+                />
+              </div>
+
+              <!-- Contact -->
+              <div class="wd-edit-profile-section mt-5">
+                <h3>Contact</h3>
+                <p>
+                  No registered services, you can add some on the
+                  <a href="#">settings</a> page.
+                </p>
+              </div>
+
+              <!-- Biography -->
+              <div class="wd-edit-profile-section mt-5">
+                <h3>Biography</h3>
+                <div class="form-group">
+                  <textarea
+                    class="form-control"
+                    rows="5"
+                    placeholder="Enter your biography"
+                  ></textarea>
+                </div>
+              </div>
+
+              <!-- Links -->
+              <div class="wd-edit-profile-section mt-5">
+                <h3>Links</h3>
+                <div class="row">
+                  <div class="col">
+                    <label for="linkTitle"><h6>Title</h6></label>
+                  </div>
+                  <div class="col-1"></div>
+                  <div class="col">
+                    <label for="linkURL"><h6>URL</h6></label>
+                  </div>
+                  <div class="col-1"></div>
+                </div>
+                <div class="row">
+                  <div class="col">
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="linkTitle"
+                      value="Youtube"
+                      placeholder="Enter link title"
+                    />
+                  </div>
+                  <div class="col-1">
+                    <i class="fas fa-arrow-right"></i>
+                  </div>
+                  <div class="col">
+                    <input
+                      type="url"
+                      class="form-control"
+                      id="linkURL"
+                      value="https://www.youtube.com/watch?v=xgY59LQfZSA&feature=youtu.be&ab_channel=WebDevTV"
+                      placeholder="Enter link URL"
+                    />
+                  </div>
+                  <div class="col-1">
+                    <i class="fas fa-times" style="color: red"></i>
+                  </div>
+                </div>
+                <button class="btn btn-light mt-1 mb-3">
+                  Add another link
+                </button>
+              </div>
+
+              <!-- Save Profile and Cancel buttons -->
+              <hr />
+              <div class="float-end">
+                <button class="btn btn-light" type="submit">Cancel</button>
+                <button class="btn btn-danger" type="submit">
+                  Save Profile
+                </button>
+              </div>
+            </form>
+          </div>
+
+          <!-- Edit Profile Button -->
+          <div class="wd-edit-profile-button">
+            <a href="index.html">
+              <button class="btn btn-light">
+                <i class="fas fa-pencil-alt me-1"></i>Cancel Editing
+              </button></a
+            >
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

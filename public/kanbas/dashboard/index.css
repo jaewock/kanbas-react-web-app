@@ -1,0 +1,64 @@
+.wd-published-courses {
+  padding-left: 40px;
+}
+
+.wd-header h2 {
+  color: gray;
+}
+
+/* override card style */
+.card {
+  width: 250px;
+  height: 250px;
+  border-radius: 5px;
+  margin: 0 20px 20px 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.wd-card-top {
+  height: 50%;
+  border-radius: 2px 2px 0 0;
+}
+
+.wd-card-bottom {
+  height: 50%;
+  padding: 10px 15px;
+}
+
+.wd-course-link {
+  text-decoration: none;
+  font-size: 15px;
+}
+
+.wd-course-description {
+  margin-top: 3px;
+  color: gray;
+  font-size: 15px;
+}
+
+.wd-more-icon {
+  font-size: 20px;
+  color: white;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
+
+.wd-info-icon {
+  padding-top: 10px;
+  font-size: 18px;
+  color: gray;
+}
+
+.wd-bg-color-lightskyblue {
+  background-color: lightskyblue;
+}
+
+.wd-bg-color-skyblue {
+  background-color: skyblue;
+}
+
+.wd-bg-color-blue {
+  background-color: blue;
+}

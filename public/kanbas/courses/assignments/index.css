@@ -1,0 +1,10 @@
+.wd-assignment-title a {
+  font-weight: bold;
+  font-size: 18px;
+  color: black;
+}
+
+.wd-assignment-description {
+  font-size: 15px;
+  color: gray;
+}

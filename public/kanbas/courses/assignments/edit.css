@@ -1,0 +1,23 @@
+.wd-text-color-green {
+  color: green;
+}
+
+.submission-box {
+  border: 1px solid #ccc;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.wd-add-button-box {
+  background-color: lightgray;
+  text-align: center;
+}
+
+.wd-add-button-box a {
+  color: black;
+  text-decoration: none;
+}
+
+.wd-edit-assignment-buttons button {
+  border: 1px solid lightgray;
+}

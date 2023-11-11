@@ -1,0 +1,18 @@
+.wd-profile {
+  width: 80%;
+}
+
+.wd-profile-section a {
+  text-decoration: none;
+  color: red;
+}
+
+.wd-edit-profile-button {
+  margin-bottom: auto;
+  width: 20%;
+}
+
+.wd-edit-profile-button button {
+  margin-left: 2px;
+  border: 1px solid lightgray;
+}

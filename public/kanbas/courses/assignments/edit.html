@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link href="../../index.css" rel="stylesheet" />
+    <link href="../index.css" rel="stylesheet" />
+    <link href="edit.css" rel="stylesheet" />
+    <link
+      href="../../../vendors/bootstrap/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link href="../../../vendors/fontawesome/css/all.css" rel="stylesheet" />
+  </head>
+  <body>
+    <!-- Body -->
+    <div class="container-fluid">
+      <!-- Kanbas Navigation Sidebar -->
+      <div class="wd-main-sidebar">
+        <ul>
+          <li>
+            <div class="wd-logo">
+              <a href="../../index.html"
+                ><img src="../../../images/neu-logo.png"
+              /></a>
+            </div>
+          </li>
+          <li>
+            <a href="../../account/profile/index.html"
+              ><i class="fas fa-user" style="color: lightgray"></i
+              ><span>Account</span></a
+            >
+          </li>
+          <li>
+            <a href="../../dashboard/index.html"
+              ><i class="fas fa-home"></i> <span>Dashboard</span></a
+            >
+          </li>
+          <li>
+            <a href="../home/index.html" class="selected"
+              ><i class="fas fa-book"></i> <span>Courses</span></a
+            >
+          </li>
+          <li>
+            <a href="#"
+              ><i class="fas fa-calendar"></i> <span>Calendar</span></a
+            >
+          </li>
+          <li>
+            <a href="#"><i class="fas fa-inbox"></i> <span>Inbox</span></a>
+          </li>
+          <li>
+            <a href="#"><i class="fas fa-history"></i> <span>History</span></a>
+          </li>
+          <li>
+            <a href="#"><i class="fas fa-cube"></i> <span>Studio</span></a>
+          </li>
+          <li>
+            <a href="#"><i class="fas fa-users"></i> <span>Commons</span></a>
+          </li>
+          <li>
+            <a href="#"
+              ><i class="fas fa-question-circle"></i> <span>Help</span></a
+            >
+          </li>
+        </ul>
+      </div>
+
+      <div class="wd-main-content">
+        <!-- Header "HOME" -->
+        <div class="wd-header">
+          <nav aria-label="breadcrumb">
+            <ol class="breadcrumb wd-breadcrumb">
+              <li>
+                <i class="fas fa-bars breadcrumb-icon wd-breadcrumb-icon"></i>
+              </li>
+              <li class="breadcrumb-item wd-breadcrumb-item">
+                <a href="#">CS5610.11744.202310</a>
+              </li>
+              <li class="breadcrumb-item wd-breadcrumb-item">
+                <a href="#">Assignments</a>
+              </li>
+              <li class="breadcrumb-item active" aria-current="page">
+                Asignment Name
+              </li>
+            </ol>
+          </nav>
+
+          <hr />
+        </div>
+
+        <div class="wd-content-row me-4">
+          <!-- Course Navigation Sidebar -->
+          <div class="wd-courses-sidebar">
+            <ul>
+              <li><a href="../home/index.html">Home</a></li>
+              <li><a href="#">Modules</a></li>
+              <li><a href="#">Piazza</a></li>
+              <li><a href="#">Zoom Meetings</a></li>
+              <li>
+                <a href="index.html" class="selected">Assignments</a>
+              </li>
+              <li><a href="#">Quizzes</a></li>
+              <li><a href="../grades/index.html">Grades</a></li>
+              <li><a href="#">People</a></li>
+              <li><a href="#">Panopto Video</a></li>
+              <li><a href="#">Discussions</a></li>
+              <li><a href="#">Announcements</a></li>
+              <li><a href="#">Pages</a></li>
+              <li><a href="#">Files</a></li>
+              <li><a href="#">Rubrics</a></li>
+              <li><a href="#">Outcomes</a></li>
+              <li><a href="#">Collaborations</a></li>
+              <li><a href="#">Syllabus</a></li>
+              <li><a href="#">Settings</a></li>
+            </ul>
+          </div>
+
+          <div class="wd-modules-column">
+            <!-- Action Buttons -->
+            <div class="wd-action-buttons mt-2 mb-4">
+              <div class="align-items-center d-flex">
+                <i class="fas fa-check-circle me-2 wd-green-icon"></i>
+                <span class="me-3 wd-text-color-green">Published</span>
+              </div>
+              <button class="btn btn-light btn-sm">
+                <i class="fas fa-ellipsis-v more-icon"></i>
+              </button>
+            </div>
+            <hr />
+
+            <!-- Edit Assignments Section -->
+            <div class="container p-0 m-0">
+              <form action="index.html">
+                <!-- Assignment Name and Description -->
+                <div class="form-group">
+                  <label for="assignmentName">Assignment Name</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="assignmentName"
+                    placeholder="Enter Assignment Name"
+                  />
+                </div>
+                <div class="form-group mb-4">
+                  <label for="description"></label>
+                  <textarea
+                    class="form-control"
+                    id="description"
+                    rows="5"
+                    placeholder="Enter Description"
+                  ></textarea>
+                </div>
+
+                <!-- Points -->
+                <div class="form-group mb-4 row">
+                  <label for="points" class="col-sm-2 col-form-label text-end">
+                    Points</label
+                  >
+                  <div class="col-sm-8">
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="points"
+                      placeholder="Enter Points"
+                    />
+                  </div>
+                </div>
+
+                <!-- Assignment Group -->
+                <div class="form-group mb-4 row">
+                  <label
+                    for="assignmentGroup"
+                    class="col-sm-2 col-form-label text-end"
+                  >
+                    Assignment Group</label
+                  >
+                  <div class="col-sm-8">
+                    <select class="form-control" id="assignmentGroup">
+                      <option value="group1">ASSIGNMENTS</option>
+                      <option value="group2">Group 2</option>
+                      <option value="group3">Group 3</option>
+                    </select>
+                  </div>
+                </div>
+
+                <!-- Display Grade As -->
+                <div class="form-group mb-4 row">
+                  <label
+                    for="displayGradeAs"
+                    class="col-sm-2 col-form-label text-end"
+                  >
+                    Display Grade As</label
+                  >
+                  <div class="col-sm-8">
+                    <select class="form-control" id="displayGradeAs">
+                      <option value="percentage">Percentage</option>
+                      <option value="points">Points</option>
+                      <option value="letterGrade">Letter Grade</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="form-group mb-4 row">
+                  <div class="col-sm-2"></div>
+                  <div class="col-sm-8">
+                    <input
+                      type="checkbox"
+                      class="form-check-input me-2"
+                      id="doesNotCountTowardFinalGrade"
+                    />
+                    <label
+                      class="form-check-label"
+                      for="doesNotCountTowardFinalGrade"
+                      >Do not count this assignment towards the final
+                      grade</label
+                    >
+                  </div>
+                </div>
+
+                <!-- Submission Type -->
+                <div class="form-group mb-4 row">
+                  <label
+                    for="submissionType"
+                    class="col-sm-2 col-form-label text-end"
+                  >
+                    Submission Type</label
+                  >
+                  <div class="col-sm-8">
+                    <div class="submission-box p-3">
+                      <select class="form-control mb-4" id="submissionType">
+                        <option value="type1">Online</option>
+                        <option value="type2">In person</option>
+                        <option value="type3">Other</option>
+                      </select>
+
+                      <h6 class="mb-4">Online Entry Options</h6>
+
+                      <div class="form-check mb-4">
+                        <input
+                          type="checkbox"
+                          class="form-check-input"
+                          id="submissionType1"
+                        />
+                        <label class="form-check-label" for="submissionType1"
+                          >Text Entry</label
+                        >
+                      </div>
+
+                      <div class="form-check mb-4">
+                        <input
+                          type="checkbox"
+                          class="form-check-input"
+                          id="submissionType2"
+                        />
+                        <label class="form-check-label" for="submissionType2"
+                          >Website URL</label
+                        >
+                      </div>
+
+                      <div class="form-check mb-4">
+                        <input
+                          type="checkbox"
+                          class="form-check-input"
+                          id="submissionType2"
+                        />
+                        <label class="form-check-label" for="submissionType2"
+                          >Media Recordings</label
+                        >
+                      </div>
+
+                      <div class="form-check mb-4">
+                        <input
+                          type="checkbox"
+                          class="form-check-input"
+                          id="submissionType2"
+                        />
+                        <label class="form-check-label" for="submissionType2"
+                          >Student Annotation</label
+                        >
+                      </div>
+
+                      <div class="form-check mb-4">
+                        <input
+                          type="checkbox"
+                          class="form-check-input"
+                          id="submissionType2"
+                        />
+                        <label class="form-check-label" for="submissionType2"
+                          >File Uploads</label
+                        >
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Assign To -->
+                <div class="form-group row">
+                  <label
+                    for="submissionType"
+                    class="col-sm-2 col-form-label text-end"
+                    >Assign</label
+                  >
+                  <div class="col-sm-8">
+                    <div class="submission-box p-3">
+                      <h6 class="mb-2">Assign to</h6>
+                      <select class="form-control mb-4" id="submissionType">
+                        <option value="type1">Everyone</option>
+                        <option value="type2">Option 2</option>
+                        <option value="type3">Option 3</option>
+                      </select>
+
+                      <label for="due" class="col-form-label p-0"
+                        ><h6>Due</h6></label
+                      >
+                      <input
+                        type="text"
+                        class="form-control mb-4"
+                        id="due"
+                        placeholder="MM/DD/YYYY"
+                      />
+
+                      <div class="row">
+                        <div class="col-sm-6">
+                          <label for="availableFrom" class="col-form-label p-0"
+                            ><h6>Available From</h6></label
+                          >
+                          <input
+                            type="text"
+                            class="form-control mb-4"
+                            id="availableFrom"
+                            placeholder="MM/DD/YYYY"
+                          />
+                        </div>
+                        <div class="col-sm-6">
+                          <label for="until" class="col-form-label p-0"
+                            ><h6>Until</h6></label
+                          >
+                          <input
+                            type="text"
+                            class="form-control mb-4"
+                            id="until"
+                            placeholder="MM/DD/YYYY"
+                          />
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Add button -->
+                <div class="form-group mb-5 row">
+                  <div class="col-sm-2"></div>
+                  <div class="col-sm-8">
+                    <div class="submission-box wd-add-button-box">
+                      <a href="#" class="wd-assign-submission-box">
+                        <i class="fa fa-plus me-2"></i>Add
+                      </a>
+                    </div>
+                  </div>
+                </div>
+
+                <hr />
+
+                <!-- Checkbox and cancel/save buttons -->
+                <input
+                  type="checkbox"
+                  class="form-check-input me-2"
+                  id="notifyUsersOfChange"
+                />
+                <label class="form-check-label" for="notifyUsersOfChange"
+                  >Notify users that this content has changed</label
+                >
+
+                <div class="float-end wd-edit-assignment-buttons">
+                  <button type="submit" class="btn btn-light me-1">
+                    Cancel
+                  </button>
+                  <button type="submit" class="btn btn-danger">Save</button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

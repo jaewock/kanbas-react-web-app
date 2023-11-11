@@ -1,0 +1,41 @@
+.wd-kanbas-list-group {
+  width: 80px;
+  background-color: black;
+  border-radius: 0;
+}
+
+.wd-kanbas-list-group-item {
+  color: white;
+  background-color: black;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  text-decoration: none;
+  padding: 10px;
+  font-size: 12px;
+  border: none;
+}
+
+.wd-kanbas-list-group-item.active {
+  color: red;
+  background-color: white;
+}
+
+.wd-kanbas-icon-container {
+  color: red;
+  font-size: 20px;
+}
+
+.wd-kanbas-logo-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+}
+
+.wd-kanbas-logo-container img {
+  max-width: 100%;
+  height: auto;
+}

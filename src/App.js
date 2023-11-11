@@ -1,19 +1,23 @@
-import './App.css';
+import Labs from "./Labs";
+import HelloWorld from "./Labs/a3/HelloWorld";
+import Kanbas from "./Kanbas";
+import { HashRouter } from "react-router-dom";
+import { Routes, Route } from "react-router";
+import Project from "./Project";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <h1>
-          Web Dev Assignment 1
-        </h1>
-        <ul>
-          <li><a href="https://nimble-bavarois-bc9ae2.netlify.app/labs/a1/index">Lab 1</a></li>
-          <li><a href="https://nimble-bavarois-bc9ae2.netlify.app/kanbas/menu">Assignment 1 - Menu</a></li>
-        </ul>
-      </header>
-    </div>
+    <HashRouter>
+      <div>
+        <Routes>
+          <Route path="/" element={<Labs />} />
+          <Route path="/Project/*" element={<Project />} />
+          <Route path="/Labs/*" element={<Labs />} />
+          <Route path="/hello" element={<HelloWorld />} />
+          <Route path="/kanbas/*" element={<Kanbas />} />
+        </Routes>
+      </div>
+    </HashRouter>
   );
 }
-
 export default App;
