@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { useParams } from "react-router-dom";
 import {
   FaGripVertical,
@@ -8,18 +8,37 @@ import {
 } from "react-icons/fa";
 import "./index.css";
 import { useSelector, useDispatch } from "react-redux";
-import {
-  addModule,
-  deleteModule,
-  updateModule,
-  setModule,
-} from "./modulesReducer";
+import * as modulesReducer from "./modulesReducer";
+import * as client from "./client";
 
 function ModuleList() {
   const { courseId } = useParams();
   const modules = useSelector((state) => state.modulesReducer.modules);
   const module = useSelector((state) => state.modulesReducer.module);
   const dispatch = useDispatch();
+
+  const handleAddModule = () => {
+    client.createModule(courseId, module).then((module) => {
+      dispatch(modulesReducer.addModule(module));
+    });
+  };
+
+  const handleDeleteModule = (moduleId) => {
+    client.deleteModule(moduleId).then(() => {
+      dispatch(modulesReducer.deleteModule(moduleId));
+    });
+  };
+
+  const handleUpdateModule = async () => {
+    await client.updateModule(module);
+    dispatch(modulesReducer.updateModule(module));
+  };
+
+  useEffect(() => {
+    client
+      .findModulesForCourse(courseId)
+      .then((modules) => dispatch(modulesReducer.setModules(modules)));
+  }, [courseId, dispatch]);
 
   return (
     <div>
@@ -55,7 +74,9 @@ function ModuleList() {
           <input
             value={module.name}
             onChange={(e) =>
-              dispatch(setModule({ ...module, name: e.target.value }))
+              dispatch(
+                modulesReducer.setModule({ ...module, name: e.target.value })
+              )
             }
             className="form-control mb-2"
             placeholder="Module Name"
@@ -63,24 +84,21 @@ function ModuleList() {
           <textarea
             value={module.description}
             onChange={(e) =>
-              dispatch(setModule({ ...module, description: e.target.value }))
+              dispatch(
+                modulesReducer.setModule({
+                  ...module,
+                  description: e.target.value,
+                })
+              )
             }
             className="form-control mb-2"
             placeholder="Module Description"
           />
           <div className="float-end mt-2">
-            <button
-              className="btn btn-success me-2"
-              onClick={() =>
-                dispatch(addModule({ ...module, course: courseId }))
-              }
-            >
+            <button className="btn btn-success me-2" onClick={handleAddModule}>
               Add
             </button>
-            <button
-              className="btn btn-primary"
-              onClick={() => dispatch(updateModule(module))}
-            >
+            <button className="btn btn-primary" onClick={handleUpdateModule}>
               Update
             </button>
           </div>
@@ -101,13 +119,13 @@ function ModuleList() {
             <div className="ms-auto d-flex align-items-center">
               <button
                 className="ms-3 me-2 btn btn-danger btn-sm"
-                onClick={() => dispatch(deleteModule(module._id))}
+                onClick={() => handleDeleteModule(module._id)}
               >
                 Delete
               </button>
               <button
                 className="me-2 btn btn-success btn-sm"
-                onClick={() => dispatch(setModule(module))}
+                onClick={() => dispatch(modulesReducer.setModule(module))}
               >
                 Edit
               </button>

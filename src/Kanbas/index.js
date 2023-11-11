@@ -1,12 +1,12 @@
-import React from "react";
+import React, { useEffect } from "react";
 import KanbasNavigation from "./KanbasNavigation";
 import { Routes, Route, Navigate, useParams } from "react-router-dom";
 import Dashboard from "./Dashboard";
 import Courses from "./Courses";
-import db from "./Database";
 import { useState } from "react";
 import store from "./store";
 import { Provider } from "react-redux";
+import * as client from "./Courses/client";
 
 function PageTitle() {
   const { route } = useParams();
@@ -14,32 +14,43 @@ function PageTitle() {
 }
 
 function Kanbas() {
-  const [courses, setCourses] = useState(db.courses);
+  const [courses, setCourses] = useState([]);
   const [course, setCourse] = useState({
     name: "New Course",
     number: "New Number",
     startDate: "2023-09-10",
     endDate: "2023-12-15",
   });
-  const addNewCourse = () => {
-    setCourses([
-      ...courses,
-      { ...course, _id: new Date().getTime().toString() },
-    ]);
+
+  const init = async () => {
+    const courses = await client.findAllCourses();
+    setCourses(courses);
   };
-  const deleteCourse = (courseId) => {
-    setCourses(courses.filter((course) => course._id !== courseId));
+
+  useEffect(() => {
+    init();
+  }, []);
+
+  const addNewCourse = async () => {
+    const newCourse = await client.addCourse(course);
+    setCourses([...courses, newCourse]);
   };
-  const updateCourse = () => {
-    setCourses(
-      courses.map((c) => {
-        if (c._id === course._id) {
-          return course;
-        } else {
-          return c;
-        }
-      })
-    );
+
+  const deleteCourse = async (courseId) => {
+    try {
+      await client.deleteCourse(courseId);
+      setCourses(courses.filter((course) => course._id !== courseId));
+    } catch (error) {
+      console.log(error);
+    }
+  };
+  const updateCourse = async () => {
+    try {
+      await client.updateCourse(course);
+      setCourses(courses.map((c) => (c._id === course._id ? course : c)));
+    } catch (error) {
+      console.log(error);
+    }
   };
 
   return (
