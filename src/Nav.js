@@ -15,6 +15,9 @@ function Nav() {
       <Link className="nav-link" to="/hello">
         Hello
       </Link>
+      <Link className="nav-link" to="/project">
+        Project
+      </Link>
       <Link className="nav-link" to="/Kanbas">
         Kanbas
       </Link>
